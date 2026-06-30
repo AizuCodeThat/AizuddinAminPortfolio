@@ -74,7 +74,7 @@ function CardBackContent() {
           Portfolio business card
         </span>
         <img
-          src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://yourportfolio.vercel.app"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=64x64&data=https://aizuddin-amin-portfolio.vercel.app/"
           alt="QR code to portfolio"
           className="w-10 h-10 rounded-md"
         />
