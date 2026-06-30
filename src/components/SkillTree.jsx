@@ -4,13 +4,29 @@ import { skillNodes, branchColors } from "../data/skillTree"
 const IDLE_RESET_MS = 6000
 const DEFAULT_TRANSFORM = { x: 0, y: 0, scale: 1 }
 
+function getTouchDistance(touches) {
+  const dx = touches[0].clientX - touches[1].clientX
+  const dy = touches[0].clientY - touches[1].clientY
+  return Math.sqrt(dx * dx + dy * dy)
+}
+
+function getTouchMidpoint(touches) {
+  return {
+    x: (touches[0].clientX + touches[1].clientX) / 2,
+    y: (touches[0].clientY + touches[1].clientY) / 2,
+  }
+}
+
 export default function SkillTree() {
   const containerRef = useRef(null)
   const lastPos = useRef({ x: 0, y: 0 })
   const idleTimer = useRef(null)
+  const pinchStartDistance = useRef(null)
+  const pinchStartScale = useRef(1)
 
   const [transform, setTransform] = useState(DEFAULT_TRANSFORM)
   const [dragging, setDragging] = useState(false)
+  const [pinching, setPinching] = useState(false)
   const [hovered, setHovered] = useState(null)
   const [isInside, setIsInside] = useState(false)
 
@@ -59,25 +75,54 @@ export default function SkillTree() {
   }
 
   function handleTouchStart(e) {
-    const touch = e.touches[0]
-    setDragging(true)
     setIsInside(true)
-    lastPos.current = { x: touch.clientX, y: touch.clientY }
     resetIdleTimer()
+
+    if (e.touches.length === 2) {
+      // two fingers down — start a pinch gesture, cancel any single-finger drag
+      setDragging(false)
+      setPinching(true)
+      pinchStartDistance.current = getTouchDistance(e.touches)
+      pinchStartScale.current = transform.scale
+    } else if (e.touches.length === 1) {
+      setDragging(true)
+      setPinching(false)
+      lastPos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }
+    }
   }
 
   function handleTouchMove(e) {
-    if (!dragging) return
-    const touch = e.touches[0]
-    const dx = touch.clientX - lastPos.current.x
-    const dy = touch.clientY - lastPos.current.y
-    lastPos.current = { x: touch.clientX, y: touch.clientY }
-    setTransform((t) => ({ ...t, x: t.x + dx, y: t.y + dy }))
-    resetIdleTimer()
+    e.preventDefault() // stop the page itself from scrolling/zooming during the gesture
+
+    if (e.touches.length === 2 && pinching) {
+      const newDistance = getTouchDistance(e.touches)
+      const ratio = newDistance / pinchStartDistance.current
+      const newScale = Math.min(1.6, Math.max(0.4, pinchStartScale.current * ratio))
+      setTransform((t) => ({ ...t, scale: newScale }))
+      resetIdleTimer()
+      return
+    }
+
+    if (e.touches.length === 1 && dragging) {
+      const touch = e.touches[0]
+      const dx = touch.clientX - lastPos.current.x
+      const dy = touch.clientY - lastPos.current.y
+      lastPos.current = { x: touch.clientX, y: touch.clientY }
+      setTransform((t) => ({ ...t, x: t.x + dx, y: t.y + dy }))
+      resetIdleTimer()
+    }
   }
 
-  function handleTouchEnd() {
-    setDragging(false)
+  function handleTouchEnd(e) {
+    if (e.touches.length === 0) {
+      setDragging(false)
+      setPinching(false)
+    } else if (e.touches.length === 1) {
+      // lifted one finger out of two — switch back to single-finger drag
+      setPinching(false)
+      setDragging(true)
+      lastPos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }
+    }
     resetIdleTimer()
   }
 
@@ -109,7 +154,7 @@ export default function SkillTree() {
         style={{
           transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})`,
           transformOrigin: "center center",
-          transition: dragging ? "none" : "transform 0.6s ease-out",
+          transition: dragging || pinching ? "none" : "transform 0.6s ease-out",
         }}
       >
         {skillNodes
@@ -182,7 +227,7 @@ export default function SkillTree() {
       </button>
 
       <div className="absolute bottom-3 right-3 text-[11px] text-gray-400">
-        Drag to pan · scroll to zoom
+        Drag to pan · pinch or scroll to zoom
       </div>
     </div>
   )
