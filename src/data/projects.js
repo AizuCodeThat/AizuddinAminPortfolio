@@ -27,6 +27,6 @@ export const projects = [
     title: "RND Project: MERN Stack CMS 3D Interactive site",
     tag: "CMS- MongoDB, Express.js, React.js, Node.js, Cloudinary(Cloud storage), Vercel(frontend), Render(backend)",
     image: "/projects/MERN3D.png",
-    link: "https://cravefx-rnd-mern-cms-flame.vercel.app/",
+    link: "https://cravefx-rnd-mern-cms-flame.vercel.app",
   },
 ]
