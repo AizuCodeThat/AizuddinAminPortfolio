@@ -23,4 +23,10 @@ export const projects = [
     image: "/projects/not-mere-spectators.png",
     link: "https://cravefx.com/portfolio/not-mere-spectators/",
   },
+   {
+    title: "RND Project: MERN Stack CMS 3D Interactive site",
+    tag: "CMS- MongoDB, Express.js, React.js, Node.js, Cloudinary(Cloud storage), Vercel(frontend), Render(backend)",
+    image: "/projects/MERN3D.png",
+    link: "https://cravefx-rnd-mern-cms-flame.vercel.app/",
+  },
 ]
