@@ -14,6 +14,8 @@ export default function ProjectModal({ project, onClose }) {
     return () => window.removeEventListener("keydown", handleKey)
   }, [onClose])
 
+  const hasVimeo = project.reelUrl?.includes("player.vimeo.com")
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6"
@@ -98,12 +100,12 @@ export default function ProjectModal({ project, onClose }) {
             </div>
           </div>
 
-           <div style={{ borderTop: "0.5px solid #3a3a3c", paddingTop: 16 }}>
+          <div style={{ borderTop: "0.5px solid #3a3a3c", paddingTop: 16 }}>
             <p className="text-[10px] uppercase tracking-wider mb-2" style={{ color: "#9a9a9c" }}>
               Project reel
             </p>
-          
-            {project.reelUrl?.includes("player.vimeo.com") ? (
+
+            {hasVimeo ? (
               <div
                 className="w-full rounded-xl overflow-hidden"
                 style={{ aspectRatio: "16/9", border: "0.5px solid #3a3a3c" }}
@@ -118,7 +120,7 @@ export default function ProjectModal({ project, onClose }) {
               </div>
             ) : (
               <div
-                onClick={() => window.open(project.reelUrl, "_blank")}
+                onClick={() => window.open(project.siteUrl, "_blank")}
                 className="relative w-full rounded-xl overflow-hidden cursor-pointer group"
                 style={{ aspectRatio: "16/9", border: "0.5px solid #3a3a3c" }}
               >
@@ -141,9 +143,9 @@ export default function ProjectModal({ project, onClose }) {
                 </div>
               </div>
             )}
-          
+
             <button
-              onClick={() => window.open(project.reelUrl, "_blank")}
+              onClick={() => window.open(project.siteUrl, "_blank")}
               className="mt-3 text-xs px-4 py-2 rounded-full w-full text-center transition-opacity hover:opacity-70"
               style={{ border: "0.5px solid #3a3a3c", color: "#d0d0d2" }}
             >
