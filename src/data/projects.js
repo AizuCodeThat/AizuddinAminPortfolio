@@ -127,4 +127,28 @@ export const projects = [
     reelUrl: null,
     siteUrl: "https://cravefx-rnd-mern-cms-flame.vercel.app",
   },
+  {
+    id: "Semester-Break",
+    title: "Indie Game Development: Semester Break",
+    tag: "Game made in under 2 weeks time for an game design class",
+    image: "/projects/MERN3D.png",
+    year: "2023",
+    client: "Indie development: Itch.io",
+    role: "Undergraduates",
+    engine: "Unity3D",
+    overview: "Semester Break is a horror game inspired by the urban legend and the game Slender Man with its own twist to fit grade requirement.",
+    contributions: [
+      {
+        title: "Main developer for the game",
+        body: "Designed and developed a complete game from concept to execution in two weeks, implementing advanced mechanics including AI pathfinding, cinematic sequencing, and full audio integration.",
+      },
+      {
+        title: "Cloud hosted and full web hosting integration with scalability in mind",
+        body: "Integrated full development workflow from backend to frontend with scalability in mind, included security authentication to avoid miscellaneous and unauthorised 3D models from being uploaded.",
+      },
+    ],
+    techStack: ["Unity3D- C#"],
+    reelUrl: "https://youtu.be/1pf4-eT2YGk?si=b8FqT_f5xC4d1uej",
+    siteUrl: "https://reaktifstudiosofficial.itch.io/semester-break",
+  },
 ]
