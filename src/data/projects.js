@@ -62,7 +62,7 @@ export const projects = [
     title: "Kebaya quest: A thread through tradition",
     tag: "PlayCanvas, JavaScript — interactive web experience",
     image: "/projects/kebaya-quest.png",
-    year: "2024",
+    year: "2025",
     client: "Cultural Heritage Client",
     role: "Junior interactive media & game developer",
     engine: "PlayCanvas / JavaScript",
