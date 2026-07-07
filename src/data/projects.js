@@ -24,7 +24,7 @@ export const projects = [
       },
     ],
     techStack: ["Unreal Engine 5", "C++", "Blueprints", "MQTT", "TCP/IP"],
-    reelUrl: "https://www.cravefx.com",
+    reelUrl: "https://player.vimeo.com/video/1123510223?h=753b65e8de",
   },
   {
     id: "arrival-wall",
@@ -92,8 +92,8 @@ export const projects = [
         body: "Integrated distributed hardware sensors with the Unity runtime using custom network protocols, ensuring reliable real-time synchronisation across the installation.",
       },
     ],
-    techStack: ["Unity 6", "C#", "MQTT", "TCP/IP"],
-    reelUrl: "https://www.cravefx.com",
+    techStack: ["Unity 6 - C#, JSON, CSV"],
+    reelUrl: "https://player.vimeo.com/video/1169840123?h=7fac4bc133",
     },
     {
     id: "mern-3D-cms",
