@@ -72,7 +72,7 @@ export const projects = [
       },
     ],
     techStack: ["PlayCanvas", "JavaScript", "HTML", "CSS"],
-    reelUrl: null,
+    reelUrl: "https://player.vimeo.com/video/1154943922?h=f05afd5ca2",
     siteUrl: "https://cravefx.com/portfolio/kebaya-quest-a-thread-through-tradition/",
   },
   {
