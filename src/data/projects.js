@@ -130,7 +130,7 @@ export const projects = [
   {
     id: "Semester-Break",
     title: "Indie Game Development: Semester Break",
-    tag: "Unity 3D (C#)-Short indie horror game",
+    tag: "Unity 3D, C#-Short indie horror game",
     image: "/projects/SemesterBreak.png",
     year: "2023",
     client: "Indie development: Itch.io",
