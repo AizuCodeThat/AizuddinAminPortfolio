@@ -32,7 +32,8 @@ export const projects = [
       },
     ],
     techStack: ["Unreal Engine 5", "Unity 6", "C#", "C++", "Blueprints", "MQTT", "TCP/IP", "JSON", "VAPT"],
-    reelUrl: "https://player.vimeo.com/video/1123510223?h=753b65e8de",
+    reelUrl: "https://player.vimeo.com/video/1115780241?h=2e2c5d56a7",
+    siteUrl: "https://cravefx.com/portfolio/singapore-odyssea-a-journey-through-time/",
   },
   {
     id: "arrival-wall",
@@ -51,7 +52,8 @@ export const projects = [
       },
     ],
     techStack: ["Unity 6", "C#", "JSON"],
-    reelUrl: "https://vimeo.com/1146455452/41b73ced48?fl=pl&fe=cm",
+    reelUrl: "https://player.vimeo.com/video/1146455452?h=41b73ced48",
+    siteUrl: "https://cravefx.com/portfolio/the-heart-soul-experience/",
   },
   {
     id: "kebaya-quest",
@@ -70,7 +72,8 @@ export const projects = [
       },
     ],
     techStack: ["PlayCanvas", "JavaScript", "HTML", "CSS"],
-    reelUrl: "https://cravefx.com/portfolio/kebaya-quest-a-thread-through-tradition/",
+    reelUrl: null,
+    siteUrl: "https://cravefx.com/portfolio/kebaya-quest-a-thread-through-tradition/",
   },
   {
     id: "not-mere-spectators",
@@ -98,6 +101,7 @@ export const projects = [
     ],
     techStack: ["Unity 6", "C#", "JSON", "CSV"],
     reelUrl: "https://player.vimeo.com/video/1169840123?h=7fac4bc133",
+    siteUrl: "https://www.cravefx.com/portfolio/not-mere-spectators/",
   },
   {
     id: "mern-3D-cms",
@@ -120,6 +124,7 @@ export const projects = [
       },
     ],
     techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    reelUrl: "https://cravefx-rnd-mern-cms-flame.vercel.app",
+    reelUrl: null,
+    siteUrl: "https://cravefx-rnd-mern-cms-flame.vercel.app",
   },
 ]
