@@ -98,44 +98,58 @@ export default function ProjectModal({ project, onClose }) {
             </div>
           </div>
 
- <div style={{ borderTop: "0.5px solid #3a3a3c", paddingTop: 16 }}>
-  <p className="text-[10px] uppercase tracking-wider mb-2" style={{ color: "#9a9a9c" }}>
-    Project reel
-  </p>
-
-        <div
-        onClick={() => window.open(project.reelUrl, "_blank")}
-        className="relative w-full rounded-xl overflow-hidden cursor-pointer group"
-        style={{ border: "0.5px solid #3a3a3c", aspectRatio: "16/9" }}
-      >
-        <img
-          src={project.image}
-          alt={`${project.title} preview`}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      
-        <div
-          className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
-          style={{ background: "rgba(0,0,0,0.6)" }}
-        >
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ background: "rgba(255,255,255,0.15)", border: "0.5px solid rgba(255,255,255,0.3)" }}
-          >
-            <span style={{ color: "#f5f5f7", fontSize: 18 }}>↗</span>
-          </div>
-          <p className="text-xs" style={{ color: "#f5f5f7" }}>View on official Web</p>
-        </div>
-      </div>
+           <div style={{ borderTop: "0.5px solid #3a3a3c", paddingTop: 16 }}>
+            <p className="text-[10px] uppercase tracking-wider mb-2" style={{ color: "#9a9a9c" }}>
+              Project reel
+            </p>
           
-      <button
-        onClick={() => window.open(project.reelUrl, "_blank")}
-        className="mt-3 text-xs px-4 py-2 rounded-full w-full text-center transition-opacity hover:opacity-70"
-        style={{ border: "0.5px solid #3a3a3c", color: "#d0d0d2" }}
-      >
-        Open full project page →
-      </button>
-    </div>
+            {project.reelUrl?.includes("player.vimeo.com") ? (
+              <div
+                className="w-full rounded-xl overflow-hidden"
+                style={{ aspectRatio: "16/9", border: "0.5px solid #3a3a3c" }}
+              >
+                <iframe
+                  src={project.reelUrl}
+                  title={`${project.title} reel`}
+                  className="w-full h-full"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            ) : (
+              <div
+                onClick={() => window.open(project.reelUrl, "_blank")}
+                className="relative w-full rounded-xl overflow-hidden cursor-pointer group"
+                style={{ aspectRatio: "16/9", border: "0.5px solid #3a3a3c" }}
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ background: "rgba(0,0,0,0.6)" }}
+                >
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center"
+                    style={{ background: "rgba(255,255,255,0.15)", border: "0.5px solid rgba(255,255,255,0.3)" }}
+                  >
+                    <span style={{ color: "#f5f5f7", fontSize: 18 }}>↗</span>
+                  </div>
+                  <p className="text-xs" style={{ color: "#f5f5f7" }}>View full project</p>
+                </div>
+              </div>
+            )}
+          
+            <button
+              onClick={() => window.open(project.reelUrl, "_blank")}
+              className="mt-3 text-xs px-4 py-2 rounded-full w-full text-center transition-opacity hover:opacity-70"
+              style={{ border: "0.5px solid #3a3a3c", color: "#d0d0d2" }}
+            >
+              Open full project page →
+            </button>
+          </div>
         </div>
       </div>
     </div>
