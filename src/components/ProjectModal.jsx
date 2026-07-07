@@ -103,18 +103,17 @@ export default function ProjectModal({ project, onClose }) {
     Project reel
   </p>
 
-  <div
-    onClick={() => window.open(project.reelUrl, "_blank")}
-    className="relative w-full rounded-xl overflow-hidden cursor-pointer group"
-    style={{ border: "0.5px solid #3a3a3c" }}
-  >
-    <img
-      src={project.image}
-      alt={`${project.title} preview`}
-      className="w-full object-cover"
-      style={{ height: 160 }}
-    />
-
+        <div
+        onClick={() => window.open(project.reelUrl, "_blank")}
+        className="relative w-full rounded-xl overflow-hidden cursor-pointer group"
+        style={{ border: "0.5px solid #3a3a3c", aspectRatio: "16/9" }}
+      >
+        <img
+          src={project.image}
+          alt={`${project.title} preview`}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      
         <div
           className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
           style={{ background: "rgba(0,0,0,0.6)" }}
@@ -125,10 +124,10 @@ export default function ProjectModal({ project, onClose }) {
           >
             <span style={{ color: "#f5f5f7", fontSize: 18 }}>↗</span>
           </div>
-          <p className="text-xs" style={{ color: "#f5f5f7" }}>View on Web</p>
+          <p className="text-xs" style={{ color: "#f5f5f7" }}>View on official Web</p>
         </div>
       </div>
-    
+          
       <button
         onClick={() => window.open(project.reelUrl, "_blank")}
         className="mt-3 text-xs px-4 py-2 rounded-full w-full text-center transition-opacity hover:opacity-70"
