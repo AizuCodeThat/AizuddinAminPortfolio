@@ -131,7 +131,7 @@ export const projects = [
     id: "Semester-Break",
     title: "Indie Game Development: Semester Break",
     tag: "Game made in under 2 weeks time for an game design class",
-    image: "/projects/MERN3D.png",
+    image: "/projects/SemesterBreak.png",
     year: "2023",
     client: "Indie development: Itch.io",
     role: "Undergraduates",
