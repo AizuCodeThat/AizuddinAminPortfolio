@@ -35,7 +35,7 @@ export const projects = [
         body: "Conducted thorough vulnerability patching and remediation, ensuring project alignment with security standards, and documented the process in a final security posture report.",
       },
     ],
-    techStack: ["Unreal Engine 5","Unity 6", "C#" ,"C++", "Blueprints", "MQTT", "TCP/IP", "JSON"],
+    techStack: ["Unreal Engine 5","Unity 6", "C#" ,"C++", "Blueprints", "MQTT", "TCP/IP", "JSON", "VAPT"],
     reelUrl: "https://player.vimeo.com/video/1123510223?h=753b65e8de",
   },
   {
