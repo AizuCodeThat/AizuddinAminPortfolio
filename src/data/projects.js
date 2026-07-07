@@ -99,7 +99,7 @@ export const projects = [
     id: "mern-3D-cms",
     title: "Fullstack MERN RND Project: 3D Interactive CMS",
     tag: "MERN, MongoDB, Express.js, React.js,Node.js - Fully hosted fullstack website with cloud integration for 3D models. ",
-    image: "/projects/mern.png",
+    image: "/projects/MERN3D.png",
     year: "2025",
     client: "Internal use",
     role: "Junior interactive media & game developer, Full-stack Software Developer",
@@ -116,6 +116,6 @@ export const projects = [
       },
     ],
     techStack: ["MongoDB, Express.js, React.js, Node.js."],
-    reelUrl: "https://www.cravefx.com",
+    reelUrl: "https://cravefx-rnd-mern-cms-flame.vercel.app",
     },
 ]
