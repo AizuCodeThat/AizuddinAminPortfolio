@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "singapore-odyssea",
     title: "Singapore Odyssea: A journey through time",
-    tag: "Unreal Engine 5 — National Museum Singapore",
+    tag: "Unreal Engine 5 - National Museum Singapore",
     image: "/projects/odyssea.jpg",
     year: "2025",
     client: "National Museum Singapore",
@@ -37,8 +37,8 @@ export const projects = [
   },
   {
     id: "arrival-wall",
-    title: "Arrival wall — SG60 Heart & Soul experience",
-    tag: "Unity 6 — large-scale interactive installation",
+    title: "Arrival wall - SG60 Heart & Soul experience",
+    tag: "Unity 6 - large-scale interactive installation",
     image: "/projects/arrival-wall.jpeg",
     year: "2025",
     client: "SG60 Heart & Soul Experience",
@@ -58,7 +58,7 @@ export const projects = [
   {
     id: "kebaya-quest",
     title: "Kebaya quest: A thread through tradition",
-    tag: "PlayCanvas, JavaScript — interactive web experience",
+    tag: "PlayCanvas, JavaScript - interactive web experience",
     image: "/projects/kebaya-quest.png",
     year: "2025",
     client: "Cultural Heritage Client",
@@ -78,7 +78,7 @@ export const projects = [
   {
     id: "not-mere-spectators",
     title: "Not Mere Spectators: The Makings of Multicultural Singapore",
-    tag: "Unity 6, C# — Interactive National Museum Exhibition",
+    tag: "Unity 6, C# - Interactive National Museum Exhibition",
     image: "/projects/not-mere-spectators.png",
     year: "2025",
     client: "Kingsmen / National Museum Singapore",
@@ -106,7 +106,7 @@ export const projects = [
   {
     id: "mern-3D-cms",
     title: "Fullstack MERN RND Project: 3D interactive CMS",
-    tag: "MERN, MongoDB, Express.js, React.js, Node.js — fully hosted fullstack website with cloud integration for 3D models",
+    tag: "MERN, MongoDB, Express.js, React.js, Node.js - fully hosted fullstack website with cloud integration for 3D models",
     image: "/projects/MERN3D.png",
     year: "2025",
     client: "Internal use",
