@@ -130,7 +130,7 @@ export const projects = [
   {
     id: "Semester-Break",
     title: "Indie Game Development: Semester Break",
-    tag: "Game made in under 2 weeks time for an game design class",
+    tag: "Engineered a polished game from concept to deployment in under two weeks for a Game Design course, managing full-stack systems including AI pathfinding and audio orchestration.",
     image: "/projects/SemesterBreak.png",
     year: "2023",
     client: "Indie development: Itch.io",
