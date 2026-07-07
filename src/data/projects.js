@@ -142,13 +142,9 @@ export const projects = [
         title: "Main developer for the game",
         body: "Designed and developed a complete game from concept to execution in two weeks, implementing advanced mechanics including AI pathfinding, cinematic sequencing, and full audio integration.",
       },
-      {
-        title: "Cloud hosted and full web hosting integration with scalability in mind",
-        body: "Integrated full development workflow from backend to frontend with scalability in mind, included security authentication to avoid miscellaneous and unauthorised 3D models from being uploaded.",
-      },
     ],
     techStack: ["Unity3D- C#"],
-    reelUrl: "https://youtu.be/1pf4-eT2YGk?si=b8FqT_f5xC4d1uej",
+    reelUrl: "https://www.youtube.com/embed/1pf4-eT2YGk",
     siteUrl: "https://reaktifstudiosofficial.itch.io/semester-break",
   },
 ]
