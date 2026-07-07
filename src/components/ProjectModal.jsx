@@ -21,7 +21,7 @@ export default function ProjectModal({ project, onClose }) {
       onClick={onClose}
     >
       <div
-        className="relative w-full sm:max-w-2xl max-h-[92vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl"
+        className="modal-scroll relative w-full sm:max-w-2xl max-h-[92vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl"
         style={{ background: "#1c1c1e", border: "0.5px solid #3a3a3c" }}
         onClick={(e) => e.stopPropagation()}
       >
