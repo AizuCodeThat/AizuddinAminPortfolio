@@ -14,7 +14,9 @@ export default function ProjectModal({ project, onClose }) {
     return () => window.removeEventListener("keydown", handleKey)
   }, [onClose])
 
-  const hasVimeo = project.reelUrl?.includes("player.vimeo.com")
+  const hasVideo =
+    project.reelUrl?.includes("player.vimeo.com") ||
+    project.reelUrl?.includes("youtube.com/embed")
 
   return (
     <div
@@ -105,7 +107,7 @@ export default function ProjectModal({ project, onClose }) {
               Project reel
             </p>
 
-            {hasVimeo ? (
+            {hasVideo ? (
               <div
                 className="w-full rounded-xl overflow-hidden"
                 style={{ aspectRatio: "16/9", border: "0.5px solid #3a3a3c" }}
